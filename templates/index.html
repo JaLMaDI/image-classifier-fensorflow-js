@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Image Classification - TensorFlow.js</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="../static/css/main.css" rel="stylesheet"> 
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet@2.0.2"></script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Image Classification</a>
+            <button onclick="window.location.href = 'https://codelabs.developers.google.com/codelabs/tensorflowjs-teachablemachine-codelab/index.html#0';" class="btn btn-outline-secondary my-2 my-sm-0" type="submit">About</button>
+        </div>
+    </nav>
+    <div class="container">
+
+       <table>
+          <tr>
+              <th>
+                <!-- Add WebCam recovery frames. -->
+                <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+              </th>
+              <th>
+                <div id="console"></div>
+              </th>
+          </tr>
+        </table>
+        <!-- Buttons corresponding to classes that will be trained. -->
+        <button id="class-na" class="btn btn-outline-secondary my-2 my-sm-1">No Action</button>
+        <button id="class-a" class="btn btn-outline-secondary my-2 my-sm-0">Class A</button>
+        <button id="class-b" class="btn btn-outline-secondary my-2 my-sm-0">Class B</button>
+        <button id="class-c" class="btn btn-outline-secondary my-2 my-sm-0">Class C</button> 
+        <!-- Load index.js after the content of the page -->
+        <script src="../static/js/index.js"></script>
+    </div>
+  </body>
+</html>
